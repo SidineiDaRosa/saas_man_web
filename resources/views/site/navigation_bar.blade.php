@@ -209,7 +209,7 @@
                             <div class="box-conteudo">
                                 <div class="titulo">Sobre</div>
                                 <div class="conteudo">
-                                <a href="#">Sobre nós</a>
+                                    <a href="#">Sobre nós</a>
                                 </div>
                             </div>
                         </div>
@@ -232,11 +232,9 @@
                                     <a href="">Produtos</a>
                                 </div>
                                 <div class="titulo">Suporte</div>
-                                <p></p>
-
-                                <div class="conteudo">
-                                    <a href="#">Suporte</a>
-                                </div>
+                                Eng. Sidinei da Rosa <br>
+                                (46)99984-26-64 <br>
+                                Email:Sidineidarosa201@gmail.com
                             </div>
                         </div>
                         {{--Box 2--}}
@@ -246,19 +244,22 @@
                                 <p></p>
                                 <div class="conteudo">
                                     <a href="{{ route('login_start') }}" class="title-menu" caption="erp">CMMS ManWEB SaaS</a>
-                                    
+
                                 </div>
                             </div>
                         </div>
                         {{--Box 3--}}
                         <div class="item">
                             <div class="box-conteudo">
-                                <div class="titulo">Consultorias</div>
-                                <p></p>
-
-                                <div class="conteudo">
-                                    <a href="{{ route('site.sobre_nos') }}">Consultorias</a>
-                                </div>
+                                <div class="titulo">Serviços</div>
+                              <ul>
+                                <li>Projeto e montagem de paineis elétricos</li>
+                                <li>Projetos retrofiting de máquinas</li>
+                                <li>Programação de CLPs, IHMs</li>
+                                <li>Projetos elétricos</li>
+                                <li>Prestação de serviços de egenharia</li>
+                                <li>Laudos elétricos</li>
+                              </ul>
                             </div>
                         </div>
                     </div>
@@ -273,15 +274,12 @@
                         {{--Box 1--}}
                         <div class="item">
                             <div class="box-conteudo">
-                                <div class="titulo">Localização Da Empresa</div>
-                                <p></p>
-
-                                <div class="conteudo">
-                                    <span class="material-symbols-outlined">
-                                        location_on
-                                    </span>
-                                    localização da Empresa
-                                </div>
+                                <div class="titulo">Localização</div>
+                                Avenida Governador Viriato Parigot de souza <br>
+                                N° 2184 <br>
+                                Palmas <br>
+                                Paraná <br>
+                                CEP 85692392.
                             </div>
                         </div>
                         {{--Box 2--}}
@@ -290,7 +288,7 @@
                                 <div class="titulo">Aqui história da empresa</div>
                                 <p></p>
                                 <div class="conteudo">
-                                Aqui história da empresa
+                                    Inicio das atividades 2004
                                 </div>
                             </div>
                         </div>
