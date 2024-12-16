@@ -151,25 +151,23 @@
         </script>
 
 
-        <div class="dropdown">
-            <div class="dropdown-button">
-                {{ Auth::user()->name }}
-                <span class="ml-3"
-                    </span>
-                    <i class="icofont-simple-down mx-2"></i>
-            </div>
-            <div class="dropdown-content">
-                <ul class="nav-item">
-                    <li class="nav-item">
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                        document.getElementById('form_logout').submit();">
-                            Saír
-                        </a>
-                        <form action="{{ route('logout') }}" method="POST" id="form_logout">
-                            @csrf
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="dropdown">
+    <div class="dropdown-button">
+        {{ Auth::user()->name }}
+        <i class="icofont-simple-down mx-2"></i>
+    </div>
+    <div class="dropdown-content">
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#" onclick="event.preventDefault(); document.getElementById('form_logout').submit();">
+                    Sair
+                </a>
+                <form action="{{ route('logout') }}" method="POST" id="form_logout" style="display: none;">
+                    @csrf
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+
     </header>

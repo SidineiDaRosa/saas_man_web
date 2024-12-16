@@ -252,14 +252,15 @@
                         <div class="item">
                             <div class="box-conteudo">
                                 <div class="titulo">Serviços</div>
-                              <ul>
-                                <li>Projeto e montagem de paineis elétricos</li>
+                                <li>Projeto e montagem de paineis elétricos BT, AT</li>
                                 <li>Projetos retrofiting de máquinas</li>
-                                <li>Programação de CLPs, IHMs</li>
+                                <li>Programação de CLPs, IHMs, Supervisáorios SCADA <br>
+                                    com aplicação de DB, IoT</li>
                                 <li>Projetos elétricos</li>
                                 <li>Prestação de serviços de egenharia</li>
                                 <li>Laudos elétricos</li>
-                              </ul>
+                                <li>Instalações elétricas industriais</li>
+
                             </div>
                         </div>
                     </div>

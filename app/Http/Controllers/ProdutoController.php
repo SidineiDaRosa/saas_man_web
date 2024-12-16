@@ -212,17 +212,18 @@ class ProdutoController extends Controller
     /** * Display the specified resource. * 
      * * @param int $id 
      * * @return \Illuminate\Http\Response */
-    public function show(Produto $produto, $id)
+    public function show($produto)
     {
-        dd($produto);
-        $produtoId = $produto->id; //pega o id do produto.
+
+        $produtoId = $produto; //pega o id do produto.
+       $produto_find=Produto::find($produtoId );
         $estoque_produtos = EstoqueProdutos::where('produto_id', $produtoId)->get();
         $estoque_produtos_sum = EstoqueProdutos::where('produto_id', $produtoId)->sum('quantidade');
         $estoque_produtos_sum_v = EstoqueProdutos::where('produto_id', $produtoId)->sum('quantidade');
         $estoque_produtos_sum_valor = $estoque_produtos_sum_v * $estoque_produtos_sum;
         $equipamentos = Equipamento::all();
         return view('app.produto.show', [
-            'produto' => $produto,
+            'produto' => $produto_find,
             'estoque_produtos' => $estoque_produtos,
             'estoque_produtos_sum' => $estoque_produtos_sum,
             'estoque_produtos_sum_valor' => $estoque_produtos_sum_valor,

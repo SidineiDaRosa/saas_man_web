@@ -1,9 +1,11 @@
 <?php
+
 namespace App\Http\Middleware;
 
 use Closure;
 use App\Models\Tenant;
 use Illuminate\Support\Facades\DB;
+
 class TenantMiddleware
 {
     public function handle($request, Closure $next)
@@ -17,8 +19,10 @@ class TenantMiddleware
         $user = auth()->user();
         $tenant = $user->tenant;
 
+        // Caso não exista um tenant, realize o logout
         if (!$tenant) {
-            return response()->json(['error' => 'Tenant não encontrado'], 404);
+            auth()->logout(); // Realiza o logout do usuário
+            return redirect()->route('login')->withErrors('Tenant não encontrado. Faça login novamente.');
         }
 
         // Configure a conexão para o banco de dados do tenant
@@ -40,7 +44,8 @@ class TenantMiddleware
             DB::connection('tenant')->getPdo();
             DB::setDefaultConnection('tenant');
         } catch (\Exception $e) {
-            return response()->json(['error' => 'Falha na conexão com o banco de dados do tenant: ' . $e->getMessage()], 500);
+            auth()->logout(); // Realiza o logout do usuário em caso de erro
+            return redirect()->route('login')->withErrors('Erro na conexão com o banco de dados do tenant. Faça login novamente.');
         }
 
         return $next($request);

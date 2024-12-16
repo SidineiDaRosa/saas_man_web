@@ -75,7 +75,6 @@ class EquipamentoController extends Controller
      */
     public function store(Request $request)
     {
-
         // $id = $request->get("empresa_id");
         //$nome = $request->get("nome");
         //echo( $id.$nome);
@@ -108,8 +107,10 @@ class EquipamentoController extends Controller
      * @param  \App\Equipamento  $equipamento
      * @return \Illuminate\Http\Response
      */
-    public function show(Equipamento $equipamento, Request $Request)
+    public function show(Request $Request)
     {
+
+        $equipamento = Equipamento::find($Request->equipamento);
         $tipoFiltro = $Request->get('tipofiltro');
         date_default_timezone_set('America/Sao_Paulo'); //define a data e hora DE SÃO PAULO
         $today = date("Y-m-d"); //data de hoje
@@ -183,8 +184,9 @@ class EquipamentoController extends Controller
      * @param  \App\Equipamento  $equipamento
      * @return \Illuminate\Http\Response
      */
-    public function edit(Equipamento $equipamento)
+    public function edit($equipamento)
     {
+        $equipamento = Equipamento::find($equipamento);
         $marcas = Marca::all();
         $equipamentos = Equipamento::all();
         $empresas = Empresas::all();
@@ -201,11 +203,11 @@ class EquipamentoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Equipamento  $equipamento
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Equipamento $equipamento)
+    public function update(Request $request)
     {
+        $equipamento=Equipamento::find($request->equipamento);
         $equipamento->update($request->all());
         $equipamento_id = $request->get('id');
         $ordens_servicos = OrdemServico::where('equipamento_id',  $equipamento_id)->where('situacao', 'aberto')->orderby('data_inicio')->orderby('hora_inicio')->get();

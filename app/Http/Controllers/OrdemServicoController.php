@@ -20,6 +20,7 @@ use PhpParser\Node\Expr\BinaryOp\Equal;
 
 class OrdemServicoController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -329,32 +330,27 @@ class OrdemServicoController extends Controller
             // 'produtos' => $produtos
         ]);
     }
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param App\Models\OrdemServico $ordem_servico
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(OrdemServico $ordem_servico)
+    /** * Display the specified resource. * 
+     * * @param int $id 
+     * * @return \Illuminate\Http\Response  */
+    public function edit($id)
     {
+        $ordemServico = OrdemServico::find($id);
         $equipamentos = Equipamento::all();
         $funcionarios = Funcionario::all();
         $empresas = Empresas::all();
 
-
         return view(
             'app.ordem_servico.edit',
             [
-                'ordem_servico' => $ordem_servico,
+                'ordem_servico' => $ordemServico,
                 'equipamentos' => $equipamentos,
                 'funcionarios' => $funcionarios,
-                'empresas' => $empresas
-
+                'empresas' => $empresas,
             ]
         );
-        return view('app.ordem_servico.show', ['ordem_servico' => $ordem_servico,]);
-        //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -362,8 +358,10 @@ class OrdemServicoController extends Controller
      * @param  \App\OrdemServico $ordem_servico
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, OrdemServico $ordem_servico)
+    public function update(Request $request)
     {
+
+        $ordem_servico= OrdemServico::find($request->ordem_servico);
         // Verificar se a ordem de serviço já foi assinada
         if (!is_null($ordem_servico->signature_receptor)) {
             return redirect()->back()->withErrors('Não é possível alterar uma ordem de serviço que já foi assinada.');
