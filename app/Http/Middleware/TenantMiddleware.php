@@ -17,7 +17,7 @@ class TenantMiddleware
 
         // Obtenha o tenant associado ao usuário autenticado
         $user = auth()->user();
-        $tenant = $user->tenant;
+       $tenant = $user->tenant;
 
         // Caso não exista um tenant, realize o logout
         if (!$tenant) {
@@ -29,11 +29,11 @@ class TenantMiddleware
         config([
             'database.connections.tenant' => [
                 'driver' => 'mysql',
-                'host' => env('DB_HOST'),
+                'host' => $tenant->database_host,
                 'port' => env('DB_PORT'),
                 'database' => $tenant->tenancy_db_name,
-                'username' => env('DB_USERNAME'),
-                'password' => env('DB_PASSWORD'),
+                'username' => $tenant->database_username,
+                'password' => $tenant->database_password,
                 'charset' => 'utf8mb4',
                 'collation' => 'utf8mb4_unicode_ci',
             ],
