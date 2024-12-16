@@ -25,7 +25,7 @@
         </div>
         <div class="logo" id="logo">
             <i class="icofont-architecture-alt icofont-1x " style="color:lightgrey;"></i>
-            <span style="font-family: Arial, Helvetica, sans-serif;color:lightgrey;font-size:20px;font-stretch:condensed;">Manutenção Fapolpa</span>
+            <span style="font-family: Arial, Helvetica, sans-serif;color:lightgrey;font-size:20px;font-stretch:condensed;">CMMS</span>
         </div>
         <style>
             @media (max-width: 900px) {
