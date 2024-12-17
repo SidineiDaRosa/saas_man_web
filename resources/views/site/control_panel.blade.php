@@ -4,6 +4,7 @@
     <div class="card">
         <div class="card-header-template">
             <div> Painel de controle</div>
+            <a href="{{ route('create-database') }}">Criar Banco de Dados</a>
 
         </div>
         <div class="card-body">

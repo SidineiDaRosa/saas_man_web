@@ -25,6 +25,7 @@
     <div class="sidebar-submenu-expanded" id="sidebar-submenu-expanded-dashboard">
         <a class="sidebar-submenu-expanded-a" href="{{ route('/') }}">voltar</a><br>
     </div>
+    
     <hr>Configurações gerais:
     <hr>Configuraços de layout:
 <script>

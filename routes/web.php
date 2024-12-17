@@ -22,6 +22,7 @@ use App\Http\Controllers\PecaEquipamentoController;
 use App\Models\PedidoCompraLista;
 use App\Http\Controllers\KPIsController;
 use App\Http\Controllers\EquipamentoController;
+use App\Http\Controllers\DataBaseController;
 //use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -64,8 +65,15 @@ Route::post('/logout', function () {
 })->name('logout');
 
 Route::middleware('tenant')->group(function () {
-    Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('app.home');
     //----------------------------------------------//
+    //                Database 
+    //---------------------------------------------//
+    Route::get('/create-database', [DataBaseController::class, 'create'])->name('create-database');
+    //----------------------------------------------//
+    //                Migrations 
+    //---------------------------------------------//
+    Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('app.home');
+    //---------------------------------------------//
     //                Ordem de serviço
     //---------------------------------------------//
     Route::get('/ordem-servico-edit/{id}', [App\Http\Controllers\OrdemServicoController::class, 'edit'])

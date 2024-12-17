@@ -624,7 +624,6 @@
                         <h6>
                             @if(isset($os_fechadas_2dias))
                             {{ $os_fechadas_2dias }}&nbsp <span style="font-family: Arial, Helvetica, sans-serif;color:blue;font-size:14;">O.S.</span>
-
                             @else
                             0
                             $os_fechadas_2dias=0;

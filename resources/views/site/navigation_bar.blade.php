@@ -176,90 +176,103 @@
             margin-right: 2px;
         }
     </style>
-    <nav class="navbar">
-        <div class="menu" id="menu">
+    <nav class="navbar" style="background-color: rgb(245, 246, 248);">
+        <div class="menu" id="menu" style="background-color: rgb(245, 246, 248);">
             <div class="menu-item">
                 <a href="#">Home</a>
             </div>
+            <!-- inicício do menu-->
             <div class="menu-item">
                 <a href="#">Sobre nós</a>
-                <div class="dropdown">
+                <!--Div que expande para baixo drop down-->
+                <div class="dropdown" style="background-color: rgb(245, 246, 248);">
                     {{--------------Início continer box----------------------------------------}}
-                    <div class="container-box">
+                    <div class="container-box" style="background-color: rgb(245, 246, 248);">
                         {{--Box 1--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
-                                <div class="titulo">Instituição</div>
+                                <div class="titulo">Empresa</div>
                                 <div class="conteudo">
-                                    <a href="#">história</a>
+                                    <span style="color:rgba(92, 92, 92, 0.8);">
+                                        Estamos empanhado em fornecer soluções <br>
+                                        Eficases, com tecnologia de ponta. <br>
+                                        Conjugando tecnologia e relacionado custo benefício, <br>
+                                        no segmento de automação de processos industriais.
+                                    </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         {{--Box 2--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Pessoas</div>
-                                <div class="conteudo">
-                                    <a href="">Nossa equipe</a>
+                                <div class="conteudo" >
+                                    <a href="" style="color:rgba(92, 92, 92, 0.8);">Nossa equipe</a>
                                 </div>
                             </div>
                         </div>
                         {{--Box 3--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Sobre</div>
                                 <div class="conteudo">
-                                    <a href="#">Sobre nós</a>
+                                    <a href="#"></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {{--------------fim continer box----------------------------------------}}
                 </div>
-
             </div>
             <div class="menu-item">
                 <a href="#">Produtos e serviços</a>
-                <div class="dropdown">
+                <!--Div que expande para baixo-->
+                <div class="dropdown" style="background-color: rgb(245, 246, 248);">
                     {{--------------Início continer box----------------------------------------}}
-                    <div class="container-box">
+                    <div class="container-box" style="background-color: rgb(245, 246, 248);">
                         {{--Box 1--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Produtos</div>
                                 <p></p>
                                 <div class="conteudo">
                                     <a href="">Produtos</a>
                                 </div>
-                                <div class="titulo">Suporte</div>
-                                Eng. Sidinei da Rosa <br>
-                                (46)99984-26-64 <br>
-                                Email:Sidineidarosa201@gmail.com
+                                <div class="titulo" style="color:rgba(0, 0, 0, 0.7);">Suporte</div>
+                                <span style="color:rgba(92, 92, 92, 0.8);">
+                                    Eng. Sidinei da Rosa <br>
+                                    (46)99984-26-64 <br>
+                                    Email:Sidineidarosa201@gmail.com
+                                </span>
+
                             </div>
                         </div>
                         {{--Box 2--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Sistemas de Gestão</div>
                                 <p></p>
                                 <div class="conteudo">
-                                    <a href="{{ route('login_start') }}" class="title-menu" caption="erp">CMMS ManWEB SaaS</a>
-
+                                    <a href="{{ route('login_start') }}" class="title-menu" caption="erp" style="color:#5C5C5C;">CMMS ManWEB SaaS</a>
                                 </div>
                             </div>
                         </div>
                         {{--Box 3--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Serviços</div>
-                                <li>Projeto e montagem de paineis elétricos BT, AT</li>
-                                <li>Projetos retrofiting de máquinas</li>
-                                <li>Programação de CLPs, IHMs, Supervisáorios SCADA <br>
-                                    com aplicação de DB, IoT</li>
-                                <li>Projetos elétricos</li>
-                                <li>Prestação de serviços de egenharia</li>
-                                <li>Laudos elétricos</li>
-                                <li>Instalações elétricas industriais</li>
+                                <span style="color:rgba(92, 92, 92, 0.8);">
+                                    <li>Projeto e montagem de paineis elétricos BT, AT</li>
+                                    <li>Projetos retrofiting de máquinas</li>
+                                    <li>Programação de CLPs, IHMs, Supervisáorios SCADA <br>
+                                        com aplicação de DB, IoT</li>
+                                    <li>Projetos elétricos</li>
+                                    <li>Prestação de serviços de egenharia</li>
+                                    <li>Laudos elétricos</li>
+                                    <li>Instalações elétricas industriais</li>
+                                </span>
+
 
                             </div>
                         </div>
@@ -269,11 +282,12 @@
             </div>
             <div class="menu-item">
                 <a href="#">Contato</a>
-                <div class="dropdown">
+                <!--Div que expande para baixo-->
+                <div class="dropdown" style="background-color: rgb(245, 246, 248);">
                     {{--------------Início continer box----------------------------------------}}
-                    <div class="container-box">
+                    <div class="container-box" style="background-color: rgb(245, 246, 248);">
                         {{--Box 1--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Localização</div>
                                 Avenida Governador Viriato Parigot de souza <br>
@@ -284,17 +298,17 @@
                             </div>
                         </div>
                         {{--Box 2--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
-                                <div class="titulo">Aqui história da empresa</div>
+                                <div class="titulo">#</div>
                                 <p></p>
                                 <div class="conteudo">
-                                    Inicio das atividades 2004
+                                    #
                                 </div>
                             </div>
                         </div>
                         {{--Box 3--}}
-                        <div class="item">
+                        <div class="item" style="background-color: rgb(245, 246, 248);">
                             <div class="box-conteudo">
                                 <div class="titulo">Notícias</div>
                                 <p></p>
