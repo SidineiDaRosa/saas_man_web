@@ -303,7 +303,7 @@
                         <span style="color:rgba(92, 92, 92, 0.8);">
                             Eng. Sidinei da Rosa <br>
                             (46)99984-26-64 <br>
-                            Email:Sidineidarosa201@gmail.com
+                            e-mail:Sidineidarosa201@gmail.com
                         </span>
 
                     </div>
