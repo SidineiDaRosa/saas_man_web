@@ -64,3 +64,104 @@
 </body>
 
 </html>
+<!--Cookies-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimento de Cookies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .cookie-banner a {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+
+        .cookie-banner .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-banner button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .cookie-banner button.decline {
+            background-color: #f44336;
+        }
+
+        .cookie-banner button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <p>Este site utiliza cookies para melhorar sua experiência. Saiba mais em nossa <a href="#">Política de Cookies</a>.</p>
+        <div class="buttons">
+            <button id="acceptCookies">Aceitar</button>
+            <button id="declineCookies" class="decline">Recusar</button>
+        </div>
+    </div>
+
+    <script>
+        // Aceitar cookies
+        document.getElementById('acceptCookies').addEventListener('click', function() {
+            localStorage.setItem('cookiesConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            console.log('Cookies aceitos');
+        });
+
+        // Recusar cookies
+        document.getElementById('declineCookies').addEventListener('click', function() {
+            localStorage.setItem('cookiesConsent', 'declined');
+            document.getElementById('cookieBanner').style.display = 'none';
+            console.log('Cookies recusados');
+        });
+
+        // Verifica se o banner precisa ser exibido
+        window.onload = function() {
+            const consent = localStorage.getItem('cookiesConsent');
+            if (consent === 'accepted' || consent === 'declined') {
+                document.getElementById('cookieBanner').style.display = 'none';
+            }
+        };
+    </script>
+
+</body>
+
+</html>
