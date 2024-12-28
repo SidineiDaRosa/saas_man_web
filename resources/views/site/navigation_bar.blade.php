@@ -353,11 +353,11 @@
                         <span style="color:rgba(92, 92, 92, 0.8);font-family:Roboto;
                         font:-weigth 300px; "
                         >
-                            Avenida Governador Viriato Parigot de souza <br>
+                            Avenida Governador Pedro Viriato Parigot De Souza <br>
                             N° 2184 <br>
                             Palmas <br>
                             Paraná <br>
-                            CEP 85692392.
+                            CEP 85692392
                         </span>
 
                     </div>
